@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32da193b4872f6545ac1928250db271e
+guid: 830e1b5885b43f14fb694951552c9717
 timeCreated: 1432612290
 licenseType: Free
 ModelImporter:
@@ -10,6 +10,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Plane
+    6400000: //RootNode
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -33,7 +34,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -51,7 +52,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
@@ -65,7 +66,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
