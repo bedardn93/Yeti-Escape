@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\YetiBehavior\YetiAI.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\YetiAI.cs">
     <Files>
-      <File FileName="Yeti Escape Game.sln" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\YetiBehavior\YetiAI.cs" Line="7" Column="1" />
+      <File FileName="Assets\Scripts\YetiAI.cs" Line="25" Column="53" />
+      <File FileName="Assets\Scripts\YetiCombat.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\char_Movement.cs" Line="7" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
