@@ -4,7 +4,7 @@ using System.Collections;
 public class char_Movement : MonoBehaviour {
 	
 	public float moveSpeed = 15f;
-	public float rotateSpeed = 50f;
+	public float rotateSpeed = 30f;
 
 	//Updates every frame after physics simulation 
 	void FixedUpdate()

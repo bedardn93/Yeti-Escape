@@ -25,8 +25,8 @@ public class YetiAI : MonoBehaviour {
 		//Locate WayPoints, store them into targets array 
 		targets = new GameObject[5];
 		//FOR LOOP STOPPED WORKING??
-		for (int i = 0; i < maxWayPoints; i++) {
-			targets [i] = GameObject.Find ("WayPoint_" + i);
+		for (int i = 0; i < maxWayPoints + 1; i++) {
+			targets [i] = GameObject.Find ("Waypoint_" + i);
 		}
 
 
@@ -86,7 +86,6 @@ public class YetiAI : MonoBehaviour {
 			Debug.Log ("Reached it");
 			return true;
 		} else {
-			Debug.Log (Vector3.Distance (transform.position, agent.destination));
 			return false;
 		}
 	}
