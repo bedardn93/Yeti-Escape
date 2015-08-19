@@ -494,7 +494,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1323340861}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1323340860
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +526,7 @@ Transform:
   m_LocalPosition: {x: 70.9000015, y: -1.04999995, z: 16.2199993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1915791682}
   - {fileID: 1197814456}
   - {fileID: 1392495412}
   m_Father: {fileID: 0}
@@ -701,10 +702,9 @@ Transform:
   m_LocalRotation: {x: 0, y: -.0523359627, z: 0, w: .99862951}
   m_LocalPosition: {x: 1.63999999, y: 1.09000003, z: -2.3499999}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1915791682}
+  m_Children: []
   m_Father: {fileID: 1323340861}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1392495413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,6 +830,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1915791682}
+  - 114: {fileID: 1915791683}
   m_Layer: 8
   m_Name: Shot Spawn
   m_TagString: Untagged
@@ -843,12 +844,24 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1915791681}
-  m_LocalRotation: {x: 0, y: .0523359627, z: 0, w: .99862951}
-  m_LocalPosition: {x: -1.14999998, y: -1.09000003, z: 4.73999977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .00289916992, y: 0, z: 2.03288651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1392495412}
+  m_Father: {fileID: 1323340861}
   m_RootOrder: 0
+--- !u!114 &1915791683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915791681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91374c4f2a19f824aa1b08794601acbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1392495412}
 --- !u!1 &1944951672
 GameObject:
   m_ObjectHideFlags: 0

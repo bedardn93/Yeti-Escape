@@ -12,12 +12,21 @@ public class arrow_collide : MonoBehaviour {
 		if (collision.transform.tag == "Maze") {
 			Destroy (collision.gameObject);
 		}
-		if (collision.transform.tag == "Yeti") {
-			Destroy(this.gameObject);
-			Destroy(collision.gameObject);
+		if (collision.transform.tag == "YetiModel") {
+			//Destroy(this.gameObject);
+			//Destroy(collision.gameObject);
 		}
 		if (collision.transform.tag == "Player") {
 			Destroy (collision.gameObject);
+		}
+	}
+
+	void OnCollisionEnter(Collision col){
+		Rigidbody rb = (Rigidbody)GetComponent (typeof(Rigidbody));
+		Transform t = (Transform)GetComponent (typeof(Transform));
+		if (col.transform.tag != "Player") {
+			rb.isKinematic = true;
+			t.parent = col.transform;
 		}
 	}
 }

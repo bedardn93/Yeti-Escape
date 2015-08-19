@@ -22,6 +22,7 @@ public class char_shoot : MonoBehaviour {
 		//Add Rigidbody to it for physics
 		BoxCollider arrowCollider = arrowInstance.AddComponent<BoxCollider> ();
 		Rigidbody clone = arrowInstance.AddComponent<Rigidbody> ();
+		//Add arrow collide script to handle collisions
 		arrowInstance.AddComponent <arrow_collide>();
 		//Shoot arrow forward from Transform object's location
 		clone.AddForce (shotSpawn.forward * speed*1000);
