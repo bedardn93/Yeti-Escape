@@ -5,7 +5,7 @@ public class char_shoot : MonoBehaviour {
 
 	public float speed;
 
-	public GameObject shot;
+	public Transform shot;
 	public Transform shotSpawn;
 	public float fireRate;
 
@@ -18,14 +18,6 @@ public class char_shoot : MonoBehaviour {
 	void Fire(){
 		//Create arrow as gameobject at shot spawn's location
 		GameObject arrowInstance = Instantiate (shot, shotSpawn.position, shotSpawn.rotation) as GameObject;
-		arrowInstance.tag = "Arrow";
-		//Add Rigidbody to it for physics
-		BoxCollider arrowCollider = arrowInstance.AddComponent<BoxCollider> ();
-		Rigidbody clone = arrowInstance.AddComponent<Rigidbody> ();
-		//Add arrow collide script to handle collisions
-		arrowInstance.AddComponent <arrow_collide>();
-		//Shoot arrow forward from Transform object's location
-		clone.AddForce (shotSpawn.forward * speed*1000);
 	}
 
 	// Update is called once per frame
