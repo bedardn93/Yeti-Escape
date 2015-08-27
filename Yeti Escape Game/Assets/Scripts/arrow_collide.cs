@@ -15,7 +15,7 @@ public class arrow_collide : MonoBehaviour {
 		if (collision.transform.tag == "Maze") {
 			Destroy (collision.gameObject);
 		}
-		if (collision.transform.tag == "YetiModel") {
+		if (collision.transform.tag == "Yeti") {
 			//Destroy(this.gameObject);
 			//Destroy(collision.gameObject);
 		}
