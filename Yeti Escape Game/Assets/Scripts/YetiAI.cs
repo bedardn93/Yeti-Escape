@@ -71,7 +71,7 @@ public class YetiAI : MonoBehaviour {
 			currentTarget = targets[Random.Range(minWayPoints,maxWayPoints)];
 			setSpeed (speedWander);
 	}
-	
+
 	//Sets the speed depending on condition of the yeti
 	void setSpeed(float currentSpeed)
 	{
