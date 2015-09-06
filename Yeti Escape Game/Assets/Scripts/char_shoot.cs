@@ -14,7 +14,7 @@ public class char_shoot : MonoBehaviour {
 
 	private float nextFire;
 
-	Vector3 fwd = Transform.TransformDirection(transform.forward);
+	//Vector3 fwd = Transform.TransformDirection(transform.forward);
 
 	void Start() {
 
@@ -26,8 +26,8 @@ public class char_shoot : MonoBehaviour {
 	}
 
 	void gunFire(){
-		if (Physics.Raycast (transform.position, fwd, 10))
-			Debug.Log ("There is something in front of the object.");
+		//if (Physics.Raycast (transform.position, fwd, 10))
+			//Debug.Log ("There is something in front of the object.");
 	}
 
 	// Update is called once per frame

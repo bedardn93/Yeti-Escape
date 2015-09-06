@@ -618,6 +618,8 @@ MonoBehaviour:
   shot: {fileID: 458580, guid: bfc46d9b71a39a24d8e661f912a3ffa5, type: 2}
   shotSpawn: {fileID: 1915791682}
   fireRate: 1
+  currentWeapon: 0
+  numWeapons: 2
 --- !u!1 &1392495407
 GameObject:
   m_ObjectHideFlags: 0
