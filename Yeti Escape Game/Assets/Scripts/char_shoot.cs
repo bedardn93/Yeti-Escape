@@ -8,9 +8,11 @@ public class char_shoot : MonoBehaviour {
 	public Transform shot;
 	public Transform shotSpawn;
 	public float fireRate;
+	public GameObject w_Lantern;
+	public GameObject w_Bow;
 
-	public int currentWeapon;
-	public int numWeapons = 3;
+	public int currentWeapon=0;
+	public int numWeapons = 2;
 
 	private float nextFire;
 
@@ -32,37 +34,57 @@ public class char_shoot : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		shoot ();
+		selectLantern (currentWeapon, w_Lantern);
+
+	}
+
+	/*
+	 *Name: Select Lantern 
+	 *Purpose: If the itemSelect number is equal to a number between 1 and 2, 
+	 *         lantern will be set to active. Else, it will be set to inactive
+	 *@author Tinytunafish
+	 */
+	void selectLantern(int itemSelect, GameObject lantern){
+		if (itemSelect >= 1 && itemSelect < 2)
+			//Change weapon to lantern
+			lantern.SetActive (true);
+		else
+			lantern.SetActive (false);
+	}
+
+	void shoot(){
 		//If player left clicks and the time for 
 		//nextFire has passed then fire and restart nextFire clock
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			if (currentWeapon == 0) { 
 				nextFire = Time.time + fireRate;
 				arrowFire ();
-			} else if (currentWeapon == 1) {
-				Debug.Log ("Shoot other thing");
-				gunFire();
-			}
 		}
-		//mouse wheel down
+/*		//mouse wheel down
 		if(Input.GetAxis("Mouse ScrollWheel") < 0){
 			if(currentWeapon < numWeapons-1){
 				currentWeapon++;
 			}else{
 				currentWeapon = 0;
 			}
-		//mouse wheel up
+			//mouse wheel up
 		} else if(Input.GetAxis ("Mouse ScrollWheel") > 0){
 			if(currentWeapon-1 >= 0){
 				currentWeapon--;
 			} else {
 				currentWeapon = numWeapons-1;
 			}
-		}
+		}*/
 		if (Input.GetKeyDown("1")){
 			currentWeapon = 0;
-		} else if (Input.GetKeyDown("2")){
-			currentWeapon = 1;
+		} else if (Input.GetKeyDown("f")){
+			if(currentWeapon < 1)
+				currentWeapon = 1;
+			else
+				currentWeapon = 0;
 		}
+
 	}
 
 	void FixedUpdate(){
