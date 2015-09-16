@@ -3,7 +3,7 @@ using System.Collections;
 
 public class char_shoot : MonoBehaviour {
 
-	public float speed;
+	public float shootSpeed;
 
 	public Transform shot;
 	public Transform shotSpawn;
@@ -46,7 +46,7 @@ public class char_shoot : MonoBehaviour {
 	 *@author Tinytunafish
 	 */
 	void selectLantern(int itemSelect, GameObject lantern){
-		if (itemSelect >= 1 && itemSelect < 2)
+		if (itemSelect ==1)
 			//Change weapon to lantern
 			lantern.SetActive (true);
 		else
@@ -60,6 +60,7 @@ public class char_shoot : MonoBehaviour {
 			if (currentWeapon == 0) { 
 				nextFire = Time.time + fireRate;
 				arrowFire ();
+			}
 		}
 /*		//mouse wheel down
 		if(Input.GetAxis("Mouse ScrollWheel") < 0){

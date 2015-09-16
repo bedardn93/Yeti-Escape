@@ -20,7 +20,7 @@ public class arrow_collide : MonoBehaviour {
 			//Destroy(collision.gameObject);
 		}
 		if (collision.transform.tag == "Player") {
-			Destroy (collision.gameObject);
+			Destroy (this.gameObject);
 		}
 	}
 
@@ -32,6 +32,10 @@ public class arrow_collide : MonoBehaviour {
 		if (col.transform.tag != "Player") {
 			rb.isKinematic = true;
 			t.parent = col.transform;
+			if(col.transform.tag == "Yeti"){
+				Debug.Log ("Hit Yeti");
+				Destroy (col.gameObject);
+			}
 		}
 	}
 }

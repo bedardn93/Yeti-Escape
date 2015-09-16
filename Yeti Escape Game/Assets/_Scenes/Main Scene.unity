@@ -259,6 +259,8 @@ GameObject:
   - 195: {fileID: 462038272}
   - 114: {fileID: 462038273}
   - 135: {fileID: 462038269}
+  - 65: {fileID: 462038275}
+  - 114: {fileID: 462038274}
   m_Layer: 0
   m_Name: Yeti
   m_TagString: Yeti
@@ -360,6 +362,30 @@ MonoBehaviour:
   speedWander: 100
   speedRun: 30
   chasingPlayer: 0
+--- !u!114 &462038274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 462038267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11139b2585c631d40a8ceec74b37838b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider1: {fileID: 462038275}
+--- !u!65 &462038275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 462038267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00000012, y: 2, z: 1.00000024}
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
 --- !u!1 &468188584
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +637,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1323340860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: 70.9000015, y: 1, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -704,12 +730,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5bf1a91ed3d3844b13a4c63544457e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  shootSpeed: 0
   shot: {fileID: 458580, guid: bfc46d9b71a39a24d8e661f912a3ffa5, type: 2}
   shotSpawn: {fileID: 1915791682}
   fireRate: 1
   w_Lantern: {fileID: 1072668345}
-  w_Bow: {fileID: 0}
+  w_Bow: {fileID: 153886, guid: bfc46d9b71a39a24d8e661f912a3ffa5, type: 2}
   currentWeapon: 0
   numWeapons: 2
 --- !u!1 &1392495407
@@ -786,6 +812,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &1392495412
 Transform:
   m_ObjectHideFlags: 0
