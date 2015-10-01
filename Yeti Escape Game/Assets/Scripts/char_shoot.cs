@@ -4,6 +4,8 @@ using System.Collections;
 public class char_shoot : MonoBehaviour {
 
 	public float shootSpeed;
+	public float ammo = 5;
+	public float maxAmmo = 5;
 
 	public Transform shot;
 	public Transform shotSpawn;
@@ -56,10 +58,11 @@ public class char_shoot : MonoBehaviour {
 	void shoot(){
 		//If player left clicks and the time for 
 		//nextFire has passed then fire and restart nextFire clock
-		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
-			if (currentWeapon == 0) { 
+		if (Input.GetMouseButtonDown (0) && Time.time > nextFire) {
+			if (currentWeapon == 0 && ammo > 0) { 
 				nextFire = Time.time + fireRate;
 				arrowFire ();
+				ammo--;
 			}
 		}
 /*		//mouse wheel down

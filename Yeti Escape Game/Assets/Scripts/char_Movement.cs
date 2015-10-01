@@ -3,7 +3,10 @@ using System.Collections;
 
 public class char_Movement : MonoBehaviour {
 	
-	public float moveSpeed = 15f;
+	private float moveSpeed;
+	public float walkSpeed = 10f;
+	public float jogSpeed = 15f;
+	public float sprintSpeed = 20f;
 	public float rotateSpeed = 30f;
 
 	//Updates every frame after physics simulation 
@@ -24,6 +27,14 @@ public class char_Movement : MonoBehaviour {
 		// Take key input
 		float moveHorizontal = Input.GetAxis ("Horizontal") * moveSpeed;
 		float moveVertical = Input.GetAxis ("Vertical") * moveSpeed;
+
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			moveSpeed = sprintSpeed;
+		} else if (Input.GetKey (KeyCode.LeftControl)) {
+			moveSpeed = walkSpeed;
+		} else {
+			moveSpeed = jogSpeed;
+		}
 
 		// Move Right
 		if (moveHorizontal > 0) {
