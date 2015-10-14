@@ -13,10 +13,16 @@ public class char_shoot : MonoBehaviour {
 	public GameObject w_Lantern;
 	public GameObject w_Bow;
 
+	public float maxLightIntensity = 3.0f;
+
 	public int currentWeapon=0;
 	public int numWeapons = 2;
 
 	private float nextFire;
+
+	private float lightIntensity = 0.0f;
+
+
 
 	//Vector3 fwd = Transform.TransformDirection(transform.forward);
 
@@ -48,11 +54,27 @@ public class char_shoot : MonoBehaviour {
 	 *@author Tinytunafish
 	 */
 	void selectLantern(int itemSelect, GameObject lantern){
-		if (itemSelect ==1)
+		//Grab the light component (specifically the spotlight component)
+		//from the lantern gameObject so that we can change the
+		//intensity of the light component on the lantern to make the light
+		//seem more natural like a lantern would
+		GameObject lt = w_Lantern.transform.GetChild (0).gameObject;
+		Light light = lt.GetComponent<Light>();
+		if (itemSelect == 1) {
 			//Change weapon to lantern
 			lantern.SetActive (true);
-		else
-			lantern.SetActive (false);
+			//Up light intenity to maximum intensity range
+			if (light.intensity <= maxLightIntensity)
+				light.intensity += 0.025f;
+		} else {
+			//Lower light intensity down to 0 
+			//and then finally disable lantern
+			if(light.intensity > 0.0f)
+				//'Blowing out' the lantern should be faster than lighting it
+				light.intensity -= 0.1f;
+			else
+				lantern.SetActive(false);
+		}
 	}
 
 	void shoot(){
